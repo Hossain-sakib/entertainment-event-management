@@ -10,7 +10,7 @@ const Services = ({ event }) => {
                 <h2 className="card-title">{title}</h2>
                 <p>{description}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn text-white bg-amber-600 hover:bg-amber-500 ">More Details</button>
+                    <Link to={`/events/${id}`}><button className="btn text-white bg-amber-600 hover:bg-amber-500 ">More Details</button></Link>
                 </div>
             </div>
         </div>
