@@ -1,5 +1,4 @@
-{
-  "events": [
+[
     {
       "id": 1,
       "image": "https://i.ibb.co/9rYXsYv/vishnu-r-nair-m1-WZS5ye404-unsplash.jpg",
@@ -44,7 +43,7 @@
     },
     {
       "id": 4,
-      "image": "https://i.ibb.co/F0jr2FV/kevin-snow-KFr-R77ke-JRQ-unsplash.jpg",
+      "image": "https://i.ibb.co/XyWRJ0W/tim-mossholder-iml-D5dbc-LM4-unsplash.jpg",
       "title": "Comedy Extravaganza",
       "description": "Prepare to laugh out loud as top comedians deliver their funniest jokes and stories on stage.",
       "features": [
@@ -86,4 +85,3 @@
       ]
     }
   ]
-}
