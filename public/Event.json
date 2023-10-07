@@ -1,0 +1,89 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/9rYXsYv/vishnu-r-nair-m1-WZS5ye404-unsplash.jpg",
+      "title": "Music Festival",
+      "description": "Join us for a weekend of non-stop music, featuring top artists from around the world. Dance the night away under the stars.",
+      "features": [
+        "Live performances by global artists",
+        "Multiple stages with different music genres",
+        "Food trucks and bars",
+        "Camping options",
+        "Interactive art installations",
+        "VIP experiences"
+      ]
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/2gfGXnn/kilyan-sockalingum-n-W1n9e-NHOsc-unsplash.jpg",
+      "title": "Theater Festival",
+      "description": "Immerse yourself in the world of Shakespeare with captivating performances of his timeless plays.",
+      "features": [
+        "Professional Shakespearean actors",
+        "Outdoor and indoor theater venues",
+        "Thematic play cycles",
+        "Educational workshops",
+        "Costume exhibitions",
+        "Food and drinks inspired by the Bard's era"
+      ]
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/9h90B0H/zhifei-zhou-XO4-A1p-WBEb-E-unsplash.jpg",
+      "title": "Film Premieres Week",
+      "description": "Be the first to watch the latest blockbusters and indie gems at our exclusive film premieres.",
+      "features": [
+        "Red carpet arrivals",
+        "Screenings of new releases",
+        "Q&A sessions with filmmakers",
+        "Film industry panels",
+        "VIP access to after-parties",
+        "Cinematic workshops"
+      ]
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/F0jr2FV/kevin-snow-KFr-R77ke-JRQ-unsplash.jpg",
+      "title": "Comedy Extravaganza",
+      "description": "Prepare to laugh out loud as top comedians deliver their funniest jokes and stories on stage.",
+      "features": [
+        "Hilarious stand-up acts",
+        "Full bar with comedy-themed drinks",
+        "Audience participation games",
+        "Guest appearances by comedy legends",
+        "Open mic nights",
+        "Comedy workshops"
+      ]
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/vwj5Y3y/sam-moghadam-khamseh-0ga-YQp-OMNpc-unsplash.jpg",
+      "title": "Rock Legends Reunion",
+      "description": "Get ready for a rock 'n' roll extravaganza as legendary rock bands reunite on stage for an unforgettable night of music and nostalgia.",
+      "features": [
+        "Iconic rock band reunions",
+        "Epic light and sound show",
+        "Rock 'n' roll merchandise booths",
+        "Interactive fan zones",
+        "Meet-and-greet sessions with rock legends",
+        "Live jam sessions",
+        "Late-night rock parties"
+      ]
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/pxXRK7n/marcus-neto-gio-H4g-Ho0-g-unsplash-1.jpg",
+      "title": "Jazz & Blues Night",
+      "description": "Get lost in the soulful rhythms of jazz and blues at this musical extravaganza.",
+      "features": [
+        "Live performances by legendary jazz and blues artists",
+        "Intimate jazz club setting",
+        "Craft cocktails and fine wine",
+        "Jazz history exhibits",
+        "Jam sessions with guest musicians",
+        "Late-night jazz and blues parties"
+      ]
+    }
+  ]
+}
