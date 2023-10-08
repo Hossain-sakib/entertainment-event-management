@@ -4,6 +4,7 @@
       "image": "https://i.ibb.co/9rYXsYv/vishnu-r-nair-m1-WZS5ye404-unsplash.jpg",
       "title": "Music Festival",
       "description": "Join us for a weekend of non-stop music, featuring top artists from around the world. Dance the night away under the stars.",
+      "charges":"20000",
       "features": [
         "Live performances by global artists",
         "Multiple stages with different music genres",
@@ -18,6 +19,7 @@
       "image": "https://i.ibb.co/2gfGXnn/kilyan-sockalingum-n-W1n9e-NHOsc-unsplash.jpg",
       "title": "Theater Festival",
       "description": "Immerse yourself in the world of Shakespeare with captivating performances of his timeless plays.",
+      "charges":25000,
       "features": [
         "Professional Shakespearean actors",
         "Outdoor and indoor theater venues",
@@ -32,6 +34,7 @@
       "image": "https://i.ibb.co/9h90B0H/zhifei-zhou-XO4-A1p-WBEb-E-unsplash.jpg",
       "title": "Film Premieres Week",
       "description": "Be the first to watch the latest blockbusters and indie gems at our exclusive film premieres.",
+      "charges":35000,
       "features": [
         "Red carpet arrivals",
         "Screenings of new releases",
@@ -46,6 +49,7 @@
       "image": "https://i.ibb.co/XyWRJ0W/tim-mossholder-iml-D5dbc-LM4-unsplash.jpg",
       "title": "Comedy Extravaganza",
       "description": "Prepare to laugh out loud as top comedians deliver their funniest jokes and stories on stage.",
+      "charges":15000,
       "features": [
         "Hilarious stand-up acts",
         "Full bar with comedy-themed drinks",
@@ -60,6 +64,7 @@
       "image": "https://i.ibb.co/vwj5Y3y/sam-moghadam-khamseh-0ga-YQp-OMNpc-unsplash.jpg",
       "title": "Rock Legends Reunion",
       "description": "Get ready for a rock 'n' roll extravaganza as legendary rock bands reunite on stage for an unforgettable night of music and nostalgia.",
+      "charges":30000,
       "features": [
         "Iconic rock band reunions",
         "Epic light and sound show",
@@ -75,6 +80,7 @@
       "image": "https://i.ibb.co/pxXRK7n/marcus-neto-gio-H4g-Ho0-g-unsplash-1.jpg",
       "title": "Jazz & Blues Night",
       "description": "Get lost in the soulful rhythms of jazz and blues at this musical extravaganza.",
+      "charges":50000,
       "features": [
         "Live performances by legendary jazz and blues artists",
         "Intimate jazz club setting",

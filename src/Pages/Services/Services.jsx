@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 
 const Services = ({ event }) => {
-    const { title, image, description, id } = event;
+    const { title, image, description, id } = event || {};
     return (
         <div className="card w-96 bg-black text-white border border-amber-600 shadow-xl ">
             <figure><img className="h-64" src={image} /></figure>
             <div className="card-body">
-                <h2 className="card-title">{title}</h2>
-                <p>{description}</p>
+                <h2 className="card-title text-3xl">{title}</h2>
+                <p className="text-white">{description}</p>
                 <div className="card-actions justify-end">
                     <Link to={`/events/${id}`}><button className="btn text-white bg-amber-600 hover:bg-amber-500 ">More Details</button></Link>
                 </div>

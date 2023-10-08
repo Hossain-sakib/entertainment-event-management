@@ -12,12 +12,12 @@ const Navbar = () => {
     const navLinks =
         <>
             <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/career'>Career</NavLink></li>
+            <li><NavLink to='/contact'>Contact</NavLink></li>
             <li><NavLink to='/about'>About</NavLink></li>
         </>
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 rounded-lg border border-amber-600">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="bg-black text-white btn border hover:border-amber-600 text-white lg:hidden">
@@ -29,7 +29,7 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <Link to='/' className="btn hover:border-amber-600 text-white normal-case text-xl hover:bg-black ml-8">EntertainXpert</Link>
+                    <Link to='/' className="btn hover:border-amber-600 text-white normal-case text-xl hover:bg-black ml-2 md:ml-8">EntertainXpert</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-4">
