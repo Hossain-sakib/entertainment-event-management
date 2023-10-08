@@ -6,8 +6,8 @@ const Footer = () => {
         <div className="border-t-4 border-amber-600 rounded-lg">
             <footer className="footer footer-center p-10 bg-black text-base-content rounded ">
                 <nav className="grid grid-flow-col gap-4">
-                    <Link to='/about'>About Us</Link>
-                    <Link to='/contact'>Contact Us</Link>
+                    <Link className="hover:underline hover:text-amber-600" to='/about'>About Us</Link>
+                    <Link className="hover:underline hover:text-amber-600" to='/contact'>Contact Us</Link>
                 </nav>
                 <nav>
                     <div className="grid grid-flow-col gap-4">

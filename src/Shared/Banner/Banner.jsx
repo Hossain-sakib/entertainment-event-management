@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
@@ -10,7 +11,7 @@ const Banner = () => {
                             <div className="max-w-md">
                                 <h1 className="mb-5 text-white text-5xl font-bold">EntertainXpert: Where Moments Come to Life</h1>
                                 <p className="mb-5 text-white">EntertainXpert specializes in creating unforgettable moments. We bring your vision to life, ensuring every detail of your event is meticulously planned and flawlessly executed. From concept to celebration, we are your partners in making memories that last a lifetime.</p>
-                                <button className="btn text-white bg-amber-600 hover:bg-amber-500">Get Started</button>
+                               <Link to='/premiumMembership'><button className="btn text-white bg-amber-600 hover:bg-amber-500">Premium Membership</button></Link>
                             </div>
                         </div>
                     </div>
@@ -26,7 +27,7 @@ const Banner = () => {
                             <div className="max-w-md">
                                 <h1 className="mb-5 text-white text-5xl font-bold">  EntertainXpert: Where Moments Come to Life</h1>
                                 <p className="mb-5 text-white"> Your journey begins here, where every detail of your event is meticulously orchestrated. From concept to execution, we are your partners in creating unforgettable moments.</p>
-                                <button className="btn text-white bg-amber-600 hover:bg-amber-500">Get Started</button>
+                                <Link to='/premiumMembership'><button className="btn text-white bg-amber-600 hover:bg-amber-500">Premium Membership</button></Link>
                             </div>
                         </div>
                     </div>
@@ -42,7 +43,7 @@ const Banner = () => {
                             <div className="max-w-md">
                                 <h1 className="mb-5 text-white text-5xl font-bold">  EntertainXpert: Where Moments Come to Life</h1>
                                 <p className="mb-5 text-white">We are thrilled to welcome you to EntertainXpert, your gateway to crafting extraordinary events. With our expertise, your vision transforms into reality.</p>
-                                <button className="btn text-white bg-amber-600 hover:bg-amber-500">Get Started</button>
+                                <Link to='/premiumMembership'><button className="btn text-white bg-amber-600 hover:bg-amber-500">Premium Membership</button></Link>
                             </div>
                         </div>
                     </div>
@@ -58,7 +59,7 @@ const Banner = () => {
                             <div className="max-w-md">
                                 <h1 className="mb-5 text-white text-5xl font-bold">  EntertainXpert: Where Moments Come to Life</h1>
                                 <p className="mb-5 text-white">Step into a world of event possibilities. We are here to streamline your event management journey, ensuring every aspect is seamless and memorable.</p>
-                                <button className="btn text-white bg-amber-600 hover:bg-amber-500">Get Started</button>
+                                <Link to='/premiumMembership'><button className="btn text-white bg-amber-600 hover:bg-amber-500">Premium Membership</button></Link>
                             </div>
                         </div>
                     </div>

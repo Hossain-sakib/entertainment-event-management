@@ -1,36 +1,51 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthPeovider";
+import { AiOutlineGoogle } from "react-icons/ai";
+
 
 const SignIn = () => {
-    const { signInUser } = useContext(AuthContext);
+    const [signInError, setSignInError] = useState('');
+    const [success, setSuccess] = useState('');
+
+    const { signInUser, googleSignIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    console.log(location);
+
 
     const handleSignIn = e => {
         e.preventDefault();
-        
-
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
-
-
         signInUser(email, password)
             .then(res => {
-                console.log(res.user);
-                navigate(location?.state ? location.state : '/')
+                navigate(location?.state ? location.state : '/');
+                setSuccess("User logged in successfully.");
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                console.error(error);
+                setSignInError(error.message);
 
+            })
+    }
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                console.log(result.user);
+                navigate("/");
+            })
+            .catch(error => {
+                console.error(error);
+            })
     }
     return (
         <div>
             <div className="hero min-h-screen bg-base-300">
                 <div className="hero-content flex-col lg:flex-row-reverse border border-amber-600 p-10 rounded-lg bg-black ">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold text-amber-500">Login now!</h1>
+                        <h1 className="text-5xl font-bold text-amber-500">Sign In now!</h1>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl pb-8  border bg-base-200 border-amber-600">
                         <form onSubmit={handleSignIn} className="card-body">
@@ -53,7 +68,18 @@ const SignIn = () => {
                                 <button type="submit" className="btn bg-amber-600 border hover:border-amber-600 text-white">Sign In</button>
                             </div>
                         </form>
-                        <p className="text-xs text-white text-center" >Do not have an account? Please<Link to='/signup' className="hover:underline hover:text-amber-600"> Sign Up</Link>.</p>
+                        {
+                            signInError && <p className="text-sm text-center text-red-600 p-4">{signInError}</p>
+                        }
+                        {
+                            success && <p className="text-sm text-center text-green-600">{success}</p>
+                        }
+                        <div className="flex flex-col text-center items-center justify-center space-y-3 text-white mx-6">
+                            <h3 className="text-sm">OR</h3>
+                            <h2 className="text-sm">Continue With Google</h2>
+                            <h2 onClick={handleGoogleSignIn} className="text-4xl"><AiOutlineGoogle></AiOutlineGoogle></h2>
+                        </div>
+                        <p className="text-xs text-white text-center mt-4" >Do not have an account? Please<Link to='/signup' className="hover:underline hover:text-amber-600"> Sign Up</Link>.</p>
                     </div>
                 </div>
             </div>

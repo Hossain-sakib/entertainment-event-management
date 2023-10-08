@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthPeovider";
+import { CgProfile } from "react-icons/cg";
+
 
 const Navbar = () => {
     const { user, signOutUser } = useContext(AuthContext);
@@ -38,12 +40,47 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                            {/* <img src={userDefaultPic} /> */}
+                <div className="navbar-end space-x-4 flex items-center">
+                    {
+                        user?.email ? <div className="dropdown dropdown-end">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <div className="rounded-full">
+                                    {
+                                        user?.photoURL ? <img src={user.photoURL} alt={user.displayName} />
+                                            :
+                                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                                <div className="w-8 rounded-full  bg-white border hover:border-amber-600 text-black">
+                                                    <div className="text-3xl flex items-center justify-center ">
+                                                        <CgProfile></CgProfile>
+                                                    </div>
+                                                </div>
+                                            </label>
+
+                                    }
+                                </div>
+                            </label>
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                <li>
+                                    <button className="btn btn-sm bg-black text-white btn-ghost border hover:border-amber-600">{user.displayName ?
+                                        <p>{user.displayName}</p> :
+                                        <p>{user.email}</p>
+                                    }</button>
+
+                                </li>
+                                <li>
+                                    <button className="btn btn-sm bg-black text-white  btn-ghost border hover:border-amber-600"><Link to='/profileDetails'>Profile details</Link></button>
+                                </li>
+                            </ul>
                         </div>
-                    </label>
+                            :
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <div className="w-8 rounded-full  bg-white border hover:border-amber-600 text-black">
+                                    <div className="text-3xl flex items-center justify-center ">
+                                        <CgProfile></CgProfile>
+                                    </div>
+                                </div>
+                            </label>
+                    }
                     {
                         user ?
                             <button onClick={handleSignOut} className="btn bg-black border hover:border-amber-600 text-white">Sign Out</button>

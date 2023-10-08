@@ -7,6 +7,7 @@ import EventDetails from "../Pages/EventDetails/EventDetails";
 import PrivateRoute from "./PrivateRoute";
 import Contact from "../Pages/Contact/Contact";
 import AboutUs from "../Pages/AboutUs/AboutUs";
+import Error from "../Pages/Error/Error";
 // import PrivateRoute from "./PrivateRoute";
 
 
@@ -15,39 +16,40 @@ import AboutUs from "../Pages/AboutUs/AboutUs";
 
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root></Root>,
-      children:[
-        {
-            path:'/',
-            element: <Home></Home>,
-            loader: () => fetch('/public/Event.json')
-        },
-        {
-          path:'/events/:id',
-          element:<PrivateRoute><EventDetails></EventDetails></PrivateRoute>,
-          loader: () => fetch('/public/Event.json')
-        },
-        {
-          path:'/contact',
-          element:<PrivateRoute><Contact></Contact></PrivateRoute>
-        },
-        {
-          path:'/about',
-          element:<PrivateRoute><AboutUs></AboutUs></PrivateRoute>
-        },
-        {
-            path:'/signin',
-            element: <SignIn></SignIn>
-        },
-        {
-            path:'/signup',
-            element: <SignUp></SignUp>
-        },
+  {
+    path: "/",
+    element: <Root></Root>,
+    errorElement: <Error></Error>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>,
+        loader: () => fetch('/public/Event.json')
+      },
+      {
+        path: '/events/:id',
+        element: <PrivateRoute><EventDetails></EventDetails></PrivateRoute>,
+        loader: () => fetch('/public/Event.json')
+      },
+      {
+        path: '/contact',
+        element: <PrivateRoute><Contact></Contact></PrivateRoute>
+      },
+      {
+        path: '/about',
+        element: <PrivateRoute><AboutUs></AboutUs></PrivateRoute>
+      },
+      {
+        path: '/signin',
+        element: <SignIn></SignIn>
+      },
+      {
+        path: '/signup',
+        element: <SignUp></SignUp>
+      },
 
-      ]
-    },
-  ]);
+    ]
+  },
+]);
 
-  export default router;
+export default router;

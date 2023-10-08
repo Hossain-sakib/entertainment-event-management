@@ -11,7 +11,7 @@ const Home = () => {
                 <Banner></Banner>
             </div>
             <div className="flex flex-col items-center justify-center">
-                <h1 className="text-center text-4xl font-semibold mb-4 mt-4 text-white">Our Services:</h1>
+                <h1 className="text-center text-4xl font-semibold mb-4 mt-4 text-amber-600">Our Services:</h1>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {
                         events.map(event => <Services key={event.id} event={event}></Services>)

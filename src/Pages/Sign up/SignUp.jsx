@@ -1,10 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthPeovider";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 
 const SignUp = () => {
+    const [signUpError, setSignUpError] = useState('');
+    const [success, setSuccess] = useState('');
+
     const { signUpUser } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleSignUp = e => {
         e.preventDefault();
@@ -15,8 +20,36 @@ const SignUp = () => {
         const email = form.get('email');
         const password = form.get('password');
 
+        if (password.length < 6) {
+            setSignUpError('Password should be at least 6 characters.');
+            return;
+        }
+        else if (!/[A-Z]/.test(password)) {
+            setSignUpError('Required at least one uppercase character.');
+            return;
+        }
+        else if (!/[a-z]/.test(password)) {
+            setSignUpError('Required at least one lowercase character.');
+            return;
+        }
+        else if (!/[0-9]/.test(password)) {
+            setSignUpError('Required at least one numerical character.');
+            return;
+        }
+        else if(!/[!@#$%^&*()_+{}:;<>,.?~\\-]/.test(password)){
+            setSignUpError('Required at least one special character.')
+        }
+
+        //    reset error 
+        setSignUpError('');
+        setSuccess('');
+
         signUpUser(email, password)
-            .then(res => console.log(res.user))
+            .then(res => {
+                navigate(location?.state ? location.state :'/');
+                setSuccess("User created successfully.")
+
+            })
             .catch(error => console.error(error))
     }
     return (
@@ -24,7 +57,7 @@ const SignUp = () => {
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse border border-amber-600 p-10 rounded-lg bg-black ">
                     <div className="text-5xl font-bold text-amber-500">
-                        <h1 className="text-5xl font-bold">Register now!</h1>
+                        <h1 className="text-5xl font-bold">Sign Up now!</h1>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl pb-8  border bg-base-200 border-amber-600">
                         <form onSubmit={handleSignUp} className="card-body">
@@ -53,10 +86,16 @@ const SignUp = () => {
                                 <input type="password" placeholder="Password" name="password" className="input input-bordered border-amber-600 bg-black" required />
                             </div>
                             <div className="form-control mt-6">
-                                <button type="submit" className="btn bg-amber-600 border hover:border-amber-600 text-white">Sign In</button>
+                                <button type="submit" className="btn bg-amber-600 border hover:border-amber-600 text-white">Sign Up</button>
                             </div>
                         </form>
-                        <p className="text-xs text-center" >Already have an account? Please<Link to='/signin' className="hover:underline hover:text-amber-600"> Sign In</Link>.</p>
+                        {
+                            signUpError && <p className="text-xs text-center text-red-600 p-4">{signUpError}</p>
+                        }
+                        {
+                            success && <p className="text-xs text-center text-green-600">{success}</p>
+                        }
+                        <p className="text-sm text-center mt-4" >Already have an account? Please<Link to='/signin' className="hover:underline hover:text-amber-600"> Sign In</Link>.</p>
                     </div>
                 </div>
             </div>
