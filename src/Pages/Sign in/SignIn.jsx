@@ -41,9 +41,9 @@ const SignIn = () => {
             })
     }
     return (
-        <div>
-            <div className="hero min-h-screen bg-base-300">
-                <div className="hero-content flex-col lg:flex-row-reverse border border-amber-600 p-10 rounded-lg bg-black ">
+        
+            <div className="flex items-center justify-center px-12  w-6xl hero min-h-screen bg-base-200">
+                <div className="hero-content flex-col lg:flex-row-reverse border border-amber-600 p-6 rounded-lg bg-black ">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold text-amber-500">Sign In now!</h1>
                     </div>
@@ -83,7 +83,7 @@ const SignIn = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        
     );
 };
 

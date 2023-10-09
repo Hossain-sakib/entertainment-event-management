@@ -7,8 +7,8 @@ import LastEvent from "../../Shared/Last events/LastEvent";
 
 const Contact = () => {
     return (
-        <div>
-            <div className="my-20 p-40 border-2 border-amber-600 bg-black">
+        <div className="pt-10 px-10">
+            <div className="border-2 p-4 border-amber-600 bg-black">
                 <div className="text-center">
                     <h1 className="text-5xl text-amber-600 font-bold underline">Contact Us</h1>
                     <div className="mt-6 space-y-4 flex flex-col items-center justify-center">

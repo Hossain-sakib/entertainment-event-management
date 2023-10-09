@@ -54,9 +54,9 @@ const SignUp = () => {
             .catch(error => console.error(error))
     }
     return (
-        <div>
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse border border-amber-600 p-10 rounded-lg bg-black ">
+  
+            <div className="flex items-center justify-center px-12  w-6xl hero min-h-screen bg-base-200">
+                <div className="hero-content flex-col lg:flex-row-reverse border border-amber-600 p-6 rounded-lg bg-black ">
                     <div className="text-5xl font-bold text-amber-500">
                         <h1 className="text-5xl font-bold">Sign Up now!</h1>
                     </div>
@@ -100,7 +100,7 @@ const SignUp = () => {
                     </div>
                 </div>
             </div>
-        </div>
+       
     );
 };
 

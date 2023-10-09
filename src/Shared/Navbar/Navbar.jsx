@@ -42,7 +42,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <div className="navbar-end space-x-4 flex items-center">
+                <div className="navbar-end space-x-1 flex items-center">
                     {
                         user?.email ? <div className="dropdown dropdown-end">
                             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
