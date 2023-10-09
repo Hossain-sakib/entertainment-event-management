@@ -20,9 +20,6 @@ const SignUp = () => {
         const email = form.get('email');
         const password = form.get('password');
 
-
-        const specialCharacter = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(password);
-
         if (password.length < 6) {
             setSignUpError('Password should be at least 6 characters.');
             return;
@@ -35,21 +32,22 @@ const SignUp = () => {
             setSignUpError('Required at least one lowercase character.');
             return;
         }
+        else if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(password)) {
+            setSignUpError('Required at least one special character.')
+        }
+
         else if (!/[0-9]/.test(password)) {
             setSignUpError('Required at least one numerical character.');
             return;
-        }
-        else if(!specialCharacter){
-            setSignUpError('Required at least one special character.')
         }
 
         //    reset error 
         setSignUpError('');
         setSuccess('');
 
-        signUpUser(email, password)
-            .then(res => {
-                navigate(location?.state ? location.state :'/');
+        signUpUser(email, password, name, image)
+            .then((res) => {
+                navigate(location?.state ? location.state : '/');
                 setSuccess("User created successfully.")
 
             })

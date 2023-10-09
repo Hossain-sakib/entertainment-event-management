@@ -63,11 +63,7 @@ const Navbar = () => {
                             </label>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                                 <li>
-                                    <button className="btn btn-sm bg-black text-white btn-ghost border hover:border-amber-600">{user.displayName ?
-                                        <p>{user.displayName}</p> :
-                                        <p>{user.email}</p>
-                                    }</button>
-
+                                    <button className="btn btn-sm bg-black text-white btn-ghost border hover:border-amber-600">{user.displayName}</button>
                                 </li>
                                 <li>
                                     <button className="btn btn-sm bg-black text-white  btn-ghost border hover:border-amber-600"><Link to='/profileDetails'>Profile details</Link></button>

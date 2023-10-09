@@ -1,8 +1,11 @@
-# React + Vite
+# Features of this project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+* Project is created by using React JS,Tailwind CSS,React Router and Firebase.
+* User Friendly UI.
+* Single Page Application.
+* Responsive for Desktop,Tablet and Mobile devices also.
+* User can sign in with their own Email and Password also
+* User can Sign In With Google.
+* Some of the pages are in under construction.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Live Website Link: 

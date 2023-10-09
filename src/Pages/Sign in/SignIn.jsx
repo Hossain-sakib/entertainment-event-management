@@ -77,7 +77,7 @@ const SignIn = () => {
                         <div className="flex flex-col text-center items-center justify-center space-y-3 text-white mx-6">
                             <h3 className="text-sm">OR</h3>
                             <h2 className="text-sm">Continue With Google</h2>
-                            <h2 onClick={handleGoogleSignIn} className="text-4xl"><AiOutlineGoogle></AiOutlineGoogle></h2>
+                            <h2 onClick={handleGoogleSignIn} className="text-4xl hover:text-amber-600"><AiOutlineGoogle></AiOutlineGoogle></h2>
                         </div>
                         <p className="text-xs text-white text-center mt-4" >Do not have an account? Please<Link to='/signup' className="hover:underline hover:text-amber-600"> Sign Up</Link>.</p>
                     </div>
