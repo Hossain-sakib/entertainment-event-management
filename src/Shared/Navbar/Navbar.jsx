@@ -20,7 +20,7 @@ const Navbar = () => {
             <li><NavLink to='/about'>About</NavLink></li>
         </>
     return (
-        <div className="mx-6 mt-6">
+        <div>
             <div className="navbar bg-base-100 rounded-lg border border-amber-600">
                 <div className="navbar-start">
                     <div className="dropdown">
