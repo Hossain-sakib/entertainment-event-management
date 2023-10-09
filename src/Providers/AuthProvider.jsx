@@ -3,6 +3,8 @@ import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStat
 import app from "../Firebase/firebase.config";
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
+import PropTypes from 'prop-types';
+
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
@@ -12,27 +14,21 @@ const AuthProvider = ({ children }) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            // User is signed up successfully
             const user = userCredential.user;
-
-            // Update the user's profile with name and photo URL
             return updateProfile(user, {
                 displayName: name,
                 photoURL: image,
             })
                 .then(() => {
-                    // Profile updated successfully
                     setUser(user);
                     setLoading(false);
                 })
                 .catch((error) => {
-                    // Handle error while updating profile
                     console.error("Error updating user profile:", error);
                     setLoading(false);
                 });
         })
     .catch((error) => {
-        // Handle error while signing up
         console.error("Error signing up user:", error);
         setLoading(false);
     });
@@ -45,6 +41,8 @@ const signInUser = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
 }
+
+
 // signin with google
 const googleProvider = new GoogleAuthProvider();
 const googleSignIn = () => {
@@ -52,11 +50,15 @@ const googleSignIn = () => {
     return signInWithPopup(auth, googleProvider);
 
 }
+
+
 // signout
 const signOutUser = () => {
     setLoading(true);
     return signOut(auth);
 }
+
+
 // observer
 useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
@@ -91,5 +93,10 @@ return (
     </AuthContext.Provider>
 );
 };
+
+
+AuthProvider.propTypes ={
+    children: PropTypes.object
+}
 
 export default AuthProvider;

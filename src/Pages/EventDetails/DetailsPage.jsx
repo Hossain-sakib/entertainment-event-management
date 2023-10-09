@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const DetailsPage = ({ idDetail }) => {
     const { title, image, description, charges, features } = idDetail || {};
@@ -27,5 +28,10 @@ const DetailsPage = ({ idDetail }) => {
         </div>
     );
 };
+
+
+DetailsPage.propTypes ={
+    idDetail: PropTypes.object
+}
 
 export default DetailsPage;
